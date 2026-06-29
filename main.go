@@ -10,15 +10,20 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// version is set at build time via -ldflags "-X main.version=...".
+// GoReleaser injects the git tag; defaults to "dev" for source builds.
+var version = "dev"
+
 var (
 	dbTarget  string
 	dbURIFlag string
 	pathFlag  string
 )
 var rootCmd = &cobra.Command{
-	Use:   "ez-mig",
-	Short: "ez-mig is a CLI tool wrapping golang-migrate with session management",
-	Long:  `A self-hostable companion tool to quickly execute database migrations using saved SQLite sessions.`,
+	Use:     "ez-mig",
+	Short:   "ez-mig is a CLI tool wrapping golang-migrate with session management",
+	Long:    `A self-hostable companion tool to quickly execute database migrations using saved SQLite sessions.`,
+	Version: version,
 }
 
 var configCmd = &cobra.Command{

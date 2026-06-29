@@ -11,10 +11,9 @@ A UX-wraper around go migration tool for lazy people
 
 
 #### Pre-requisites
-- Go installed
-- GCC installed ( Just in case ) 
-- Linux ( only support linux now, will be adding other platform support shortly.)
-- Database installed ( PostgreSQL, MYSql ) will be adding other dbs support shortly.
+- Go installed ( only for building from source )
+- Linux, macOS, or Windows ( prebuilt binaries available on the releases page )
+- Database installed ( PostgreSQL, MySQL ) will be adding other dbs support shortly.
 
 
 ## Installation
